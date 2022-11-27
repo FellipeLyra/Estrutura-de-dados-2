@@ -11,7 +11,7 @@ public class Selection {
   static int[] v;
 
   public static void main(String[] args) throws IOException {
-    Scanner scanner = new Scanner(new FileReader("C:\\Users\\fhlyr\\OneDrive\\Área de Trabalho\\100milteste.txt"))
+    Scanner scanner = new Scanner(new FileReader("C:\\Users\\fhlyr\\OneDrive\\Área de Trabalho\\vetor\\5teste.txt"))
         .useDelimiter("\n");
     while (scanner.hasNext()) {
       texto = scanner.next();
@@ -52,7 +52,7 @@ public class Selection {
 
     System.out.println("Executado em = " + horas + ":" + minutos + ":" + segundos + ":" + mili);
     // System.out.println(Arrays.toString(intArray));
-    FileWriter arq = new FileWriter("C:\\Users\\fhlyr\\OneDrive\\Área de Trabalho\\500milordenadoteste1.txt");
+    FileWriter arq = new FileWriter("C:\\Users\\fhlyr\\OneDrive\\Área de Trabalho\\5ordenado.txt");
     PrintWriter gravarArq = new PrintWriter(arq);
 
     String v = "[";
@@ -66,7 +66,9 @@ public class Selection {
         v += ", ";
       }
     }
-    gravarArq.print(v);
+    gravarArq.println("Nome: Fellipe Henrique Gomes Lyra");
+    gravarArq.println("Tempo: " + horas + ":" + minutos + ":" + segundos + ":" + mili);
+    gravarArq.println("Vetor ordenado: " + v);
     arq.close();
 
   }
